@@ -9,13 +9,19 @@ if __name__ == '__main__':
   else:
       count=0
       c=0
-      s = sum([a for a in A if a>0 and a//11])
+      s=0
+      for a in A:
+          if a > 0 and a // 11:
+            s = sum([a])
+          else:
+            s=0
       for a in A:
           if a>0 and a//11:
               b=(max(A))
               if a<b:
                   count+=a
                   c=b-count
+
       print("Разность элементов:",c,)
       print("Сумма элементов:",s,)
 
